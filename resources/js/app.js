@@ -8,6 +8,15 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+// import * as Vue from 'vue';
+import * as VueRouter from 'vue-router';
+// Vue.use(Router);
+
+let routes = [
+    { path: '/form', component: require('./components/user/form-data.vue').default },
+    { path: '/component', component: require('./components/ExampleComponent.vue').default },
+]
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -21,6 +30,10 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+const router = new VueRouter({
+    routes,
+});
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -29,4 +42,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    router,
 });
