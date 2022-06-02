@@ -1,5 +1,6 @@
-<template>
-    <h5>Informasi Calon Ibu</h5>
+@extends('user/userHome')
+@section('content')
+    <h5>Informasi Ibu</h6>
     <div class="d-flex justify-content-center mb-4">
         <br>
         <div class="card shadow row col col-mb-4" style="width: 18rem; border-radius: 1.5rem">
@@ -27,7 +28,40 @@
         </div>
     </div>
     <br>
-    <h5>Kesehatan Calon Ibu</h5>
+    <h5>Informasi Balita</h6>
+    <div class="d-flex justify-content-center mb-4">
+        <br>
+        <div class="card shadow row col col-mb-4" style="width: 18rem; border-radius: 1.5rem">
+            <div class="card-body">
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-4 col-form-label">Nama</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control border border-secondary" id="inputPassword">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">NIK</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control border border-secondary" id="inputPassword">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Tanggal Lahir</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control border border-secondary" id="inputPassword">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">JK</label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control border border-secondary" id="inputPassword">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5>Kesehatan Balita</h5>
     <div class="d-flex justify-content-center mb-4">
         <div class="card shadow row col col-mb-4" style="width: 18rem; border-radius: 1.5rem">
             <div class="card-body">
@@ -44,25 +78,25 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Tinggi Badan</label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Panjang Badan</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control border border-secondary" id="inputPassword">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Lingkar Pinggang</label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Lingkar Kepala</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control border border-secondary" id="inputPassword">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Lingkar Bokong</label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Asi Eksklusif</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control border border-secondary" id="inputPassword">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Lingkar Lengan</label>
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Imunasasi</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control border border-secondary" id="inputPassword">
                     </div>
@@ -75,12 +109,4 @@
         <button type="button" class="btn btn-primary" style="border-radius: 1rem">
         <div class="mx-3">SIMPAN</div></button>
     </div>
-</template>
-
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-</script>
+@endsection

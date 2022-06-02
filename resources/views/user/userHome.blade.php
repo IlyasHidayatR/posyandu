@@ -12,13 +12,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class='container'>
-            <ul id="app" class="nav justify-content-center" style='background-color:aqua'>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <div id="app" class="container">
+            <ul class="nav justify-content-center" style='background-color:aqua'>
                 <li class="nav-item">
-                    <router-link to="/component" class="nav-link active">Active</router-link>
+                    <router-link to='form' class="nav-link active">Active</router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <router-link class="nav-link" to='component'>Link</router-link>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -29,12 +30,10 @@
             </ul>
         </div>
         <content>
-            <div>
-                <div class='mt-3'>
-                    <router-view></router-view>
-                </div>
+            <div class="container mt-5 col-5 col-sm-5">
+                <router-view></router-view>
+                <!-- @yield('content') -->
             </div>
         </content>
-        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

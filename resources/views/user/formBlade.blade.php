@@ -1,4 +1,5 @@
-<template>
+@extends('user/userHome')
+@section('content')
     <h5>Informasi Calon Ibu</h5>
     <div class="d-flex justify-content-center mb-4">
         <br>
@@ -75,12 +76,4 @@
         <button type="button" class="btn btn-primary" style="border-radius: 1rem">
         <div class="mx-3">SIMPAN</div></button>
     </div>
-</template>
-
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-</script>
+@endsection

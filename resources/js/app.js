@@ -8,12 +8,12 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
-// import * as Vue from 'vue';
 import * as VueRouter from 'vue-router';
-// Vue.use(Router);
+
 
 let routes = [
     { path: '/form', component: require('./components/user/form-data.vue').default },
+    { path: '/form1', component: require('./components/user/form-data1.vue').default },
     { path: '/component', component: require('./components/ExampleComponent.vue').default },
 ]
 
@@ -30,9 +30,6 @@ let routes = [
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-const router = new VueRouter({
-    routes,
-});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -42,5 +39,5 @@ const router = new VueRouter({
 
 const app = new Vue({
     el: '#app',
-    router,
+    router: new VueRouter(routes)
 });
