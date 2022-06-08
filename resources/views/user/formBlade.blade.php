@@ -1,6 +1,6 @@
 @extends('user/userHome')
 @section('content')
-    <h5>Informasi Calon Ibu</h5>
+    <h5><i class="fas fa-user-plus fa-lg"></i> Informasi Calon Ibu</h5>
     <div class="d-flex justify-content-center mb-4">
         <br>
         <div class="card shadow row col col-mb-4" style="width: 18rem; border-radius: 1.5rem">
@@ -8,8 +8,12 @@
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-4 col-form-label">Nama</label>
                     <div class="col-sm-8">
-                        <input type="password" class="form-control border border-secondary" id="inputPassword">
-                        <i class="fa fa-search"></i>
+                        <div class="input-group">
+                            <input id="search-input" type="search" id="form1" class="form-control border border-secondary border-end-0" />
+                            <button id="search-button" type="button" class="btn border border-secondary border-start-0">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -28,7 +32,7 @@
         </div>
     </div>
     <br>
-    <h5>Kesehatan Calon Ibu</h5>
+    <h5><i class="fas fa-user-plus fa-lg"></i> Kesehatan Calon Ibu</h5>
     <div class="d-flex justify-content-center mb-4">
         <div class="card shadow row col col-mb-4" style="width: 18rem; border-radius: 1.5rem">
             <div class="card-body">

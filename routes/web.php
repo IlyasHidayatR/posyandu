@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('user.userHome');
 });
 
+Route::get('/sample', function () {
+    return view('user.formBlade');
+});
+
+
+Route::get('/sample1', function () {
+    return view('user.formBlade1');
+});
+
 Route::get('/home', function () {
     return view('welcome');
 });
