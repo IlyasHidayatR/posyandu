@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\FormBalita;
+use App\Http\Livewire\FormIbu;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('user.userHome');
+    return view('auth.login');
 });
 
 Route::get('/sample', function () {
@@ -28,4 +30,16 @@ Route::get('/sample1', function () {
 
 Route::get('/home', function () {
     return view('welcome');
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    Route::get('Ibu', FormIbu::class)->name('Ibu');
+    Route::get('Balita', FormBalita::class)->name('Balita');
 });

@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
         <div id="app" class="container">
             <ul class="nav justify-content-center" style='background-color:aqua'>
                 <li class="nav-item">
